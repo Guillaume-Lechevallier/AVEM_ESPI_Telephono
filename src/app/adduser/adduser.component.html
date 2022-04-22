@@ -5,29 +5,60 @@
 <table>
     <tr>
         <td>Renseignez un utilisateur (adresse mail) :</td>
-        <td><input></td>
-        <td><button>Confirmer</button></td>
+        <td>
+          <mat-form-field>
+            <mat-label>Ex : john.doe@avem-groupe.com</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+        <td><button mat-button color="primary" (click) = "confirmation()" class="pl-3">Confirmer</button></td>
         <td>Nom:</td>
-        <td><input disabled></td>
+        <td>
+          <mat-form-field>
+            <mat-label>Doe</mat-label>
+            <input matInput disabled value={{nom}}>
+          </mat-form-field>
+        </td>
         <td>Prénom:</td>
-        <td><input disabled></td>
+        <td>
+          <mat-form-field>
+            <mat-label>John</mat-label>
+            <input matInput disabled>
+          </mat-form-field>
+        </td>
         <td>Id:</td>
-        <td><input disabled></td>
-        <td><input type="checkbox" id="Sendmail" name="Sendmail" checked>Envoyer un E-mail à cet utilisateur ?</td>
+        <td>
+          <mat-form-field>
+            <mat-label>j.doe</mat-label>
+            <input matInput disabled>
+          </mat-form-field>
+        </td>
+        <td></td>
 
     </tr>
     <tr>
-        <td>Renseignez un numéro de telephone :</td>
-        <td><input></td>
+        <td>Renseignez un numéro
+          de telephone :</td>
+        <td>
+          <mat-form-field>
+            <mat-label>Ex : 0000000000</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
     </tr>
     <tr>
         <td>Renseignez un numéro cour :</td>
-        <td><input></td>
+        <td>
+          <mat-form-field>
+            <mat-label>Ex : 000000</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
     </tr>
     <tr>
         <td></td>
         <td></td>
-        <td><button>Ajouter un utilisateur !</button></td>
+        <td><button mat-button color="primary">Ajouter un utilisateur !</button></td>
     </tr>
 </table>
 </body>

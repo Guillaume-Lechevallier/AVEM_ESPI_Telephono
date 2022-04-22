@@ -1,6 +1,5 @@
 body{
     background: #d7dcfd;
-
     border: 2px solid #787fbb;
 }
 :host {
@@ -9,19 +8,8 @@ body{
     color: #333;
 
 }
-input{
-    border-top-style: none;
-    border-left: none;
-    border-right: none;
-}
 button{
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
+    border: 2px solid gray;
+
 }
+

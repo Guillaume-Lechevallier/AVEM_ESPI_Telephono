@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdduserComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
 
+  }
+  nom!:string;
   ngOnInit(): void {
   }
-
+  confirmation() : void{
+    this.nom = "finito";
+  }
 }
