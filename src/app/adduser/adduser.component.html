@@ -1,64 +1,76 @@
 <br><br><br>
 <body>
 
-    <h3>Ajouter un utilisateur : </h3>
+<h3>Ajouter un utilisateur : </h3>
 <table>
     <tr>
-        <td>Renseignez un utilisateur (adresse mail) :</td>
-        <td>
-          <mat-form-field>
-            <mat-label>Ex : john.doe@avem-groupe.com</mat-label>
-            <input matInput>
-          </mat-form-field>
-        </td>
-        <td><button mat-button color="primary" (click) = "confirmation()" class="pl-3">Confirmer</button></td>
-        <td>Nom:</td>
-        <td>
-          <mat-form-field>
-            <mat-label>Doe</mat-label>
-            <input matInput disabled value={{nom}}>
-          </mat-form-field>
-        </td>
-        <td>Prénom:</td>
-        <td>
-          <mat-form-field>
-            <mat-label>John</mat-label>
-            <input matInput disabled>
-          </mat-form-field>
-        </td>
-        <td>Id:</td>
-        <td>
-          <mat-form-field>
-            <mat-label>j.doe</mat-label>
-            <input matInput disabled>
-          </mat-form-field>
-        </td>
-        <td></td>
-
+        Renseignez type d'utilisateur :
+        <mat-form-field>
+            <mat-label>Type d'utilisateur</mat-label>
+            <mat-select #clientValue (selectionChange)="changeClient($event.value)" placeholder="Client*">
+                <mat-option *ngFor="let user of user" [value]="user.value" id="selecttype">
+                    {{user.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
     </tr>
+
     <tr>
-        <td>Renseignez un numéro
-          de telephone :</td>
-        <td>
-          <mat-form-field>
+        Renseignez un numéro
+        de telephone :
+        <mat-form-field>
             <mat-label>Ex : 0000000000</mat-label>
             <input matInput>
-          </mat-form-field>
-        </td>
+        </mat-form-field>
     </tr>
     <tr>
-        <td>Renseignez un numéro cour :</td>
-        <td>
-          <mat-form-field>
+        Renseignez un numéro cour :
+        <mat-form-field>
             <mat-label>Ex : 000000</mat-label>
             <input matInput>
-          </mat-form-field>
+        </mat-form-field>
+    </tr>
+    <div id="userselected" style="display:none;">
+        Renseignez un utilisateur (adresse mail) :
+        <mat-form-field>
+            <mat-label>Ex : john.doe@avem-groupe.com</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <button (click)="confirmation()" class="pl-3" color="primary" mat-button>Confirmer</button>
+        Nom:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{nom}}>
+        </mat-form-field>
+        Nom du groupe:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{prenom}}>
+        </mat-form-field>
+        Id:
+        <mat-form-field>
+            <mat-label></mat-label>
+            <input disabled matInput value={{idad}}>
+        </mat-form-field>
+        <mat-checkbox>Envoyer un mail de confirmation à l'utilisateur</mat-checkbox>
+    </div>
+    <div id="otherselected" style="display:none;">
+        <tr>
+            <td>Renseignez le nom du groupe:</td>
+            <td>
+                <mat-form-field>
+                    <mat-label>Ex : Commercial</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </td>
+        </tr>
+    </div>
+    <tr>
+
+        <td>
+            <button color="primary" mat-button>Ajouter un utilisateur !</button>
         </td>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td><button mat-button color="primary">Ajouter un utilisateur !</button></td>
-    </tr>
 </table>
+
 </body>

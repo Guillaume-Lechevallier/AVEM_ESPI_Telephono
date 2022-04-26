@@ -1,2 +1,26 @@
-<app-navbar></app-navbar>
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img
+            alt="avemLogo"
+            src="https://www.avem-groupe.com/wp-content/uploads/2018/05/avem-logo-rz.png"
+            width="100"
+    />
+    <button mat-button color="primary" (click)="dashboard()" class="pl-3">Tableau de bord</button>
+    <div class="spacer"></div>
+    <button mat-button color="primary" (click)="adduser()" class="pl-3">Ajouter un utilisateur</button>
+    <div class="spacer"></div>
+    <button mat-button color="primary" (click)="showuser()" class="pl-3">Lister les utilisateurs</button>
+    <div class="spacer"></div>
+    <span>Bienvue dans la nouvelle console téléphonie !</span>
+    <div class="spacer"></div>
+
+</div>
+<div id="adduser" style="display:none;">
 <app-adduser></app-adduser>
+</div>
+<div id="dashboard" style="display:none;">
+    <app-dashboard></app-dashboard>
+</div>
+<div id="showuser" style="display:block;">
+    <app-showuser></app-showuser>
+</div>
