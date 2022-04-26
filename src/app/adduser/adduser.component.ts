@@ -32,6 +32,9 @@ export class AdduserComponent implements OnInit {
     console.log(value);
     var usertype = document.getElementById("userselected");
     var othertype = document.getElementById("otherselected");
+    var errorusernotfund = document.getElementById("errorusernotfund");
+    // @ts-ignore
+    errorusernotfund.style.display = "none"
 
     if (value === "Utilisateur"){
       // @ts-ignore
@@ -51,6 +54,9 @@ export class AdduserComponent implements OnInit {
     this.nom = "Recherche d'un nom";
     this.prenom = "Recherche d'un prenom";
     this.idad = "test"
+    var errorusernotfund = document.getElementById("errorusernotfund");
+    // @ts-ignore
+    errorusernotfund.style.display = "block"
   }
 
 

@@ -10,6 +10,11 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ShowuserComponent } from './showuser/showuser.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatIconModule} from "@angular/material/icon";
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
         MatButtonModule,
         MatInputModule,
         MatSelectModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatButtonToggleModule,
+        MatIconModule,
+        MatTabsModule
     ],
   providers: [],
   bootstrap: [AppComponent]

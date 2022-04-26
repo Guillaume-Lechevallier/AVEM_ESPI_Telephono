@@ -1,6 +1,6 @@
-<br><br><br>
-<body>
 
+<body>
+<br>
 <h3>Ajouter un utilisateur : </h3>
 <table>
     <tr>
@@ -42,7 +42,7 @@
             <mat-label></mat-label>
             <input disabled matInput value={{nom}}>
         </mat-form-field>
-        Nom du groupe:
+        Nom de famille:
         <mat-form-field>
             <mat-label></mat-label>
             <input disabled matInput value={{prenom}}>
@@ -53,6 +53,11 @@
             <input disabled matInput value={{idad}}>
         </mat-form-field>
         <mat-checkbox>Envoyer un mail de confirmation à l'utilisateur</mat-checkbox>
+
+    </div>
+    <div id="errorusernotfund" style="display:none;">
+
+        <span style="color:red">utilisateur non trouvé !</span>
     </div>
     <div id="otherselected" style="display:none;">
         <tr>
@@ -66,7 +71,6 @@
         </tr>
     </div>
     <tr>
-
         <td>
             <button color="primary" mat-button>Ajouter un utilisateur !</button>
         </td>
