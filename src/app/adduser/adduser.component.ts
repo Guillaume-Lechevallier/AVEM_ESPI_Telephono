@@ -9,25 +9,15 @@ interface user{
   styleUrls: ['./adduser.component.css']
 })
 export class AdduserComponent implements OnInit {
-
-  constructor() {
-
-  }
-  nom!:string;
-  prenom!:string;
-  idad!:string;
+  constructor() {}
+  nom!: string;
+  prenom!: string;
+  idad!: string;
   user: user[] = [{value: 'Utilisateur', viewValue: 'Utilisateur'},
     {value: 'Type de valeurs 1', viewValue: 'Type de valeurs 1'},
     {value: 'Type de valeurs 2', viewValue: 'Type de valeurs 2'}];
-  usertype!:string;
-  othertype!:string;
-
-
-
   ngOnInit(): void {
   }
-
-
   changeClient(value: string) {
     console.log(value);
     var usertype = document.getElementById("userselected");
@@ -35,29 +25,29 @@ export class AdduserComponent implements OnInit {
     var errorusernotfund = document.getElementById("errorusernotfund");
     // @ts-ignore
     errorusernotfund.style.display = "none"
-
-    if (value === "Utilisateur"){
+    if (value === "Utilisateur") {
       // @ts-ignore
       usertype.style.display = "block"
       // @ts-ignore
       othertype.style.display = "none"
-
-    }else{
+    } else {
       // @ts-ignore
       usertype.style.display = "none"
       // @ts-ignore
       othertype.style.display = "block"
+      // @ts-ignore
+
     }
     return value;
   }
-  confirmation() : void{
+  confirmation(): void {
     this.nom = "Recherche d'un nom";
     this.prenom = "Recherche d'un prenom";
     this.idad = "test"
     var errorusernotfund = document.getElementById("errorusernotfund");
     // @ts-ignore
     errorusernotfund.style.display = "block"
+    // @ts-ignore
+    boutonconfirmer.disabled = "block";
   }
-
-
 }

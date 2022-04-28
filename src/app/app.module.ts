@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
@@ -15,13 +16,18 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatIconModule} from "@angular/material/icon";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatGridListModule} from "@angular/material/grid-list";
+import { GraphiqueComponent } from './graphique/graphique.component';
+import { HistoriqueComponent } from './historique/historique.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdduserComponent,
     ShowuserComponent,
-    DashboardComponent
+    DashboardComponent,
+    GraphiqueComponent,
+    HistoriqueComponent
   ],
     imports: [
         BrowserModule,
@@ -34,9 +40,11 @@ import {MatTabsModule} from "@angular/material/tabs";
         MatPaginatorModule,
         MatButtonToggleModule,
         MatIconModule,
-        MatTabsModule
+        MatTabsModule,
+        MatGridListModule
     ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
