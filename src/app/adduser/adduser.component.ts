@@ -13,6 +13,7 @@ export class AdduserComponent implements OnInit {
   nom!: string;
   prenom!: string;
   idad!: string;
+  numerolong!:string;
   user: user[] = [{value: 'Utilisateur', viewValue: 'Utilisateur'},
     {value: 'Type de valeurs 1', viewValue: 'Type de valeurs 1'},
     {value: 'Type de valeurs 2', viewValue: 'Type de valeurs 2'}];
@@ -39,6 +40,15 @@ export class AdduserComponent implements OnInit {
 
     }
     return value;
+  }
+  changenumerocourt(){
+    // @ts-ignore
+    var input = document.getElementById("numerocourt").value;
+    // @ts-ignore
+    var onlyletter = document.getElementById("numerocourt").value;
+    this.numerolong = input;
+    onlyletter = input.replace(/[^0-9]/,'')
+    console.log("test")
   }
   confirmation(): void {
     this.nom = "Recherche d'un nom";

@@ -9,8 +9,10 @@ import * as Highcharts from 'highcharts';
 
 export class GraphiqueComponent implements OnInit {
   // @ts-ignore
-  numeroutilise :number = 250
-  numerodisponible :number = 50
+  numeroutilisateur :number = 250
+  numerolibre :number = 50
+  numerogroupe :number = 250
+  numerovdn :number = 50
   public options: any = {
     chart: {
       plotBackgroundColor: null,
@@ -45,11 +47,21 @@ export class GraphiqueComponent implements OnInit {
     series: [{
       name: 'Brands',
       data: [{
-        name: 'Utilisé',
-        y: this.numeroutilise,
+        name: 'Utilisateur',
+        y: this.numeroutilisateur,
+        color : "#5043c4"
       }, {
-        name: 'Disponible',
-        y: this.numerodisponible,
+        name: 'Groupe',
+        y: this.numerogroupe,
+        color : "#c4c243"
+      }, {
+        name: 'VDN',
+        y: this.numerovdn,
+        color : "#d13b3b"
+      }, {
+        name: 'Libre',
+        y: this.numerolibre,
+        color : "#7ad13b"
       }]
     }]
   }
