@@ -19,6 +19,8 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { GraphiqueComponent } from './graphique/graphique.component';
 import { HistoriqueComponent } from './historique/historique.component';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { ModifyuserComponent } from './modifyuser/modifyuser.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { HistoriqueComponent } from './historique/historique.component';
     ShowuserComponent,
     DashboardComponent,
     GraphiqueComponent,
-    HistoriqueComponent
+    HistoriqueComponent,
+    DeleteuserComponent,
+    ModifyuserComponent
   ],
     imports: [
         BrowserModule,

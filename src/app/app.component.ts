@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// @ts-ignore
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -29,16 +30,6 @@ export class AppComponent {
     // @ts-ignore
     showuser.style.display = "none";
   }
-  showuser(){
-    var dashboard = document.getElementById("dashboard");
-    var adduser = document.getElementById("adduser");
-    var showuser = document.getElementById("showuser");
-    // @ts-ignore
-    dashboard.style.display = "none";
-    // @ts-ignore
-    adduser.style.display = "none";
-    // @ts-ignore
-    showuser.style.display = "block";
-  }
+
 
 }

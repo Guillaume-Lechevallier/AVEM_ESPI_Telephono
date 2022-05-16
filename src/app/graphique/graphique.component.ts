@@ -9,10 +9,10 @@ import * as Highcharts from 'highcharts';
 
 export class GraphiqueComponent implements OnInit {
   // @ts-ignore
-  numeroutilisateur :number = 250
-  numerolibre :number = 50
-  numerogroupe :number = 250
-  numerovdn :number = 50
+  numeroutilisateur :number = 156
+  numerolibre :number = 35
+  numerogroupe :number = 25
+  numerovdn :number = 45
   public options: any = {
     chart: {
       plotBackgroundColor: null,
@@ -69,6 +69,5 @@ export class GraphiqueComponent implements OnInit {
 
   ngOnInit() {
     Highcharts.chart('graphique', this.options);
-
   }
 }
