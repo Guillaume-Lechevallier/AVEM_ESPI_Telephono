@@ -19,17 +19,7 @@ export class AppComponent {
     // @ts-ignore
     showuser.style.display = "none";
   }
-  adduser(){
-    var dashboard = document.getElementById("dashboard");
-    var adduser = document.getElementById("adduser");
-    var showuser = document.getElementById("showuser");
-    // @ts-ignore
-    dashboard.style.display = "none";
-    // @ts-ignore
-    adduser.style.display = "block";
-    // @ts-ignore
-    showuser.style.display = "none";
-  }
+
 
 
 }

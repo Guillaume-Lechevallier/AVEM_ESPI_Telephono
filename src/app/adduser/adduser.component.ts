@@ -40,7 +40,6 @@ export class AdduserComponent implements OnInit {
       // @ts-ignore
       othertype.style.display = "block"
       // @ts-ignore
-
     }
     return value;
   }

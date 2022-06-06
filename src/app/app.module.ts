@@ -21,6 +21,7 @@ import { GraphiqueComponent } from './graphique/graphique.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { DeleteuserComponent } from './deleteuser/deleteuser.component';
 import { ModifyuserComponent } from './modifyuser/modifyuser.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ModifyuserComponent } from './modifyuser/modifyuser.component';
         MatButtonToggleModule,
         MatIconModule,
         MatTabsModule,
-        MatGridListModule
+        MatGridListModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent],

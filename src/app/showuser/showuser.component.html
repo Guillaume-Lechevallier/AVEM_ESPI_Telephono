@@ -1,29 +1,58 @@
 
 <body>
 <br>
-<h2>Rechercher {{typerecherche}} :
-<mat-form-field>
-    <mat-label>{{exemplerecherche}}</mat-label>
-    <input matInput>
-</mat-form-field>
-    Rechercher dans
-<mat-form-field>
-    <mat-label></mat-label>
-    <mat-select #clientValue (selectionChange)="changetypeuser($event.value)" placeholder="Client*">
-        <mat-option *ngFor="let user of user" [value]="user.value" id="selecttype">
-            {{user.viewValue}}
-        </mat-option>
-    </mat-select>
-</mat-form-field>
+<h1>Rechercher un utilisateur</h1>
+<div id="recherchesimple" style="display:none;">
+    <h2>Numéro :
+        <mat-form-field>
+            <mat-label>Ex : 0234567891</mat-label>
+            <input matInput>
+        </mat-form-field>
+        Numéro court :
+        <mat-form-field>
+            <mat-label>Ex : 123456</mat-label>
+            <input matInput>
+        </mat-form-field>
+        Rechercher un utilisateur :
+        <mat-form-field>
+            <mat-label>Ex : j.doe</mat-label>
+            <input matInput>
+        </mat-form-field>
+        Types d'utilisateurs :
+        <mat-form-field>
+            <mat-label>Ex : VDN</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <button mat-button>Rechercher</button>
+    </h2>
+</div>
+<div id="rechercheavance" style="display:block;">
+    <h2>Rechercher {{typerecherche}} :
+        <mat-form-field>
+            <mat-label>{{exemplerecherche}}</mat-label>
+            <input matInput>
+        </mat-form-field>
+        Rechercher dans
+        <mat-form-field>
+            <mat-label></mat-label>
+            <mat-select #clientValue (selectionChange)="changetypeuser($event.value)" placeholder="Client*">
+                <mat-option *ngFor="let user of user" [value]="user.value" id="selecttype">
+                    {{user.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
 
-    <button mat-button>Rechercher</button>
+        <button mat-button>Rechercher</button>
+    </h2>
 
-</h2>
+</div>
+<mat-checkbox (change)="toggleEditable($event)" [(ngModel)]="checked">Recherche avancé</mat-checkbox>
+
 <div class="mat-elevation-z8">
 
     <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="numero">
-            <th mat-header-cell *matHeaderCellDef> Numero de téléphone </th>
+            <th *matHeaderCellDef mat-header-cell> Numero de téléphone</th>
             <td mat-cell *matCellDef="let element"> {{element.numero}} </td>
         </ng-container>
 
@@ -61,5 +90,4 @@
                    aria-label="Selectionnez le nombres d'utilisateurs par pages">
     </mat-paginator>
 </div>
-
 </body>
